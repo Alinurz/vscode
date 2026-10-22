@@ -1,0 +1,424 @@
+html,
+body {
+  background-color: #191919;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191919;
+    padding: 1rem 2rem;
+}
+
+.logo-block p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:first-child {
+  color: #118da8;
+}
+
+nav a:hover {
+    color: #4ecdc4;
+}
+/* Общие стили секции */
+.episodes-section {
+  background-color: #191919;
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: sans-serif;
+}
+
+.episodes-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Шапка секции */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Общие стили для кнопок */
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: 500;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #191919;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #191919;
+}
+
+/* Список и карточки */
+.episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.episode-card {
+  position: relative;
+  background-color: #191919;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  min-height: 450px;
+}
+
+.episode-card--black {
+  background-color: #000000;
+}
+
+/* Изображения */
+.episode-image-wrap {
+  flex: 0 0 35%;
+  position: relative;
+}
+
+.episode-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+.episode-image-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* Контент внутри карточки */
+.episode-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.episode-content--hero {
+  justify-content: center;
+  gap: 18px;
+}
+
+.episode-content--hero .episode-text {
+  color: #ffffff;
+}
+
+.listen-platforms {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.listen-platforms img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.episode-badge {
+  background-color: #191919;
+  color: #8a92a6;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.episode-number {
+  color: #118da8;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.episode-name {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 70.4px;
+  letter-spacing: 2.56px;
+  margin: 0;
+}
+
+.episode-card:not(:first-child) .episode-name {
+  font-size: 48px;
+  line-height: 52.8px;
+  letter-spacing: 1.92px;
+}
+
+.episode-name--hero {
+  width: 500px;
+  max-width: 100%;
+}
+
+.episode-name-row {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 16px;
+}
+
+.episode-next-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.episode-next,
+.episode-level {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  line-height: 88px;
+  letter-spacing: 3.2px;
+}
+
+.episode-next {
+  font-weight: 400;
+  font-size: 75px;
+}
+
+.episode-level {
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.episode-image-underline {
+  display: block;
+  width: 160px;
+  height: 12px;
+  object-fit: none;
+  object-position: 0 -82px;
+  margin-top: -18px;
+}
+
+.episode-text {
+  color: #8a92a6;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* Кнопка внутри карточки делает отступ чуть больше */
+.episode-content .btn {
+  padding: 12px 24px;
+  margin-top: auto;
+}
+
+.host-section {
+  position: relative;
+  left: 50%;
+  display: grid;
+  width: min(1300px, calc(100vw - 60px));
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: 72px;
+  margin-top: 110px;
+  padding: 20px 0 60px;
+  transform: translateX(-50%);
+}
+
+.host-copy {
+  max-width: 500px;
+}
+
+.host-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: max-content;
+  margin-bottom: 8px;
+}
+
+.host-eyebrow {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: #118da8;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.host-title {
+  margin: 0 0 24px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 65px;
+  font-weight: 400;
+  line-height: 79.2px;
+  letter-spacing: 2.88px;
+}
+
+.host-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #8a92a6;
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.host-bio p {
+  margin: 0;
+}
+
+.host-visual {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: 650px;
+}
+
+.host-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.host-mark {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 112px;
+  aspect-ratio: 1;
+  place-items: center;
+}
+
+.host-mark-background,
+.host-mark-arrow {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.host-mark-arrow {
+  width: 64px;
+  height: 36px;
+}
+
+/* Адаптивность под мобильные экраны (меньше 768px) */
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .episode-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    min-height: 0;
+  }
+  
+  .episode-image-wrap {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .episode-image {
+    height: auto;
+  }
+
+  .episode-content {
+    width: 100%;
+  }
+
+  .host-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+    width: calc(100vw - 40px);
+    margin-top: 80px;
+  }
+
+  .host-copy {
+    max-width: none;
+  }
+
+  .host-label {
+    gap: 8px;
+  }
+
+  .host-title {
+    font-size: 44px;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+  }
+
+  .host-visual {
+    justify-self: center;
+    max-width: 460px;
+  }
+
+  .host-mark {
+    width: 90px;
+  }
+
+  .host-mark-arrow {
+    width: 52px;
+    height: 30px;
+  }
+  
+  .episode-name {
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: 0.88px;
+  }
+}
