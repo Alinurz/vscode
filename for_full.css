@@ -1,9 +1,5 @@
 /* =========================
-   1. ПЕРЕМЕННЫЕ (цвета, шрифты, отступы)
-   ========================= */
-
-/* =========================
-   2. СБРОС И БАЗОВЫЕ СТИЛИ
+   1. СБРОС И БАЗОВЫЕ СТИЛИ
    ========================= */
 
 html,
@@ -15,8 +11,20 @@ body {
   margin: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* =========================
-   3. ТИПОГРАФИКА (заголовки, текст, ссылки)
+   2. ТИПОГРАФИКА (заголовки, текст, ссылки)
    ========================= */
 
 .logo-block p {
@@ -164,7 +172,7 @@ nav a:hover {
 }
 
 /* =========================
-   4. LAYOUT (шапка, футер, расположение блоков)
+   3. LAYOUT (шапка, футер, расположение блоков)
    ========================= */
 
 header {
@@ -279,6 +287,10 @@ nav {
   z-index: 1;
 }
 
+/* =========================
+   4. КОМПОНЕНТЫ (кнопки, карточки, блоки с фото)
+   ========================= */
+
 .newsletter-form {
   display: flex;
   flex-direction: column;
@@ -332,10 +344,6 @@ nav {
   height: 74px;
   pointer-events: none;
 }
-
-/* =========================
-   5. КОМПОНЕНТЫ (кнопки, карточки, блоки с фото)
-   ========================= */
 
 /* Общие стили для кнопок */
 .btn {
@@ -482,18 +490,7 @@ nav {
   height: 36px;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
+/* Отзывы слушателей */
 .reviews-section {
   padding: 42px 0 48px;
   color: #ffffff;
@@ -544,6 +541,7 @@ nav {
   overflow-wrap: anywhere;
 }
 
+/* Подвал */
 .site-footer {
   box-sizing: border-box;
   padding: 48px 0 64px;
@@ -645,34 +643,9 @@ nav {
 }
 
 /* =========================
-   6. ПРОЧИЕ / СПЕЦИФИЧНЫЕ СТИЛИ
+   5. АДАПТИВНОСТЬ
    ========================= */
 
-@media (max-width: 768px) {
-  .reviews-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .footer-inner {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px 20px;
-  }
-}
-
-@media (max-width: 400px) {
-  .reviews-grid {
-    width: calc(100vw - 40px);
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .footer-inner {
-    width: calc(100vw - 40px);
-    grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
-  }
-}
-
-/* Адаптивность под мобильные экраны (меньше 768px) */
 @media (max-width: 768px) {
   .section-header {
     flex-direction: column;
@@ -687,7 +660,7 @@ nav {
     padding: 20px;
     min-height: 0;
   }
-  
+
   .episode-image-wrap {
     width: 100%;
     flex: 0 0 auto;
@@ -764,5 +737,27 @@ nav {
     left: 0;
     width: 68px;
     height: 74px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .reviews-grid {
+    width: calc(100vw - 40px);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-inner {
+    width: calc(100vw - 40px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
   }
 }
