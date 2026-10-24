@@ -16,20 +16,20 @@
     </div>
     <div class="nav-block">
         <nav>
-            <a href="">Home</a>
-            <a href="">Episodes</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#episodes">Episodes</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </nav>
     </div>
 </header>
 <section class="episodes-section">
   <div class="container">
     
-    <div class="episodes-list">
+    <div class="episodes-list" id="episodes">
       
       <!-- Карточка 1 -->
-      <div class="episode-card">
+      <div class="episode-card" id="home">
         <div class="episode-image-wrap">
           <img src="IMAGE%20(0).png" alt="Audio mixer and headphones on a recording desk" class="episode-image">
         </div>
@@ -97,7 +97,7 @@
       </div>
 
     </div>
-    <section class="host-section" aria-labelledby="host-title">
+    <section class="host-section" id="about" aria-labelledby="host-title">
       <div class="host-copy">
         <div class="host-label">
           <div class="host-mark" aria-hidden="true">
@@ -116,7 +116,7 @@
         <img src="IMAGE.(11)png" alt="Jacob Paulaner recording a podcast" class="host-portrait">
       </div>
     </section>
-    <section class="newsletter-section" aria-labelledby="newsletter-title">
+    <section class="newsletter-section" id="contact" aria-labelledby="newsletter-title">
       <div class="newsletter-card">
         <div class="newsletter-copy">
           <p class="newsletter-eyebrow">Email Newsletter</p>
@@ -135,7 +135,80 @@
   </div>
 </section>
 
+<section class="reviews-section" aria-label="Listener reviews">
+  <div class="reviews-grid">
+    <article class="review-card">
+      <p class="review-rating" aria-label="5 out of 5 stars">★★★★★</p>
+      <blockquote class="review-quote">I can’t recommend this podcast enough</blockquote>
+      <p class="review-author">Betty Lacey</p>
+    </article>
+    <article class="review-card">
+      <p class="review-rating" aria-label="5 out of 5 stars">★★★★★</p>
+      <blockquote class="review-quote">Jacob is the best in the business</blockquote>
+      <p class="review-author">Adam Driver</p>
+    </article>
+    <article class="review-card">
+      <p class="review-rating" aria-label="5 out of 5 stars">★★★★★</p>
+      <blockquote class="review-quote">A wealth of audio knowledge</blockquote>
+      <p class="review-author">Marcus Brown</p>
+    </article>
+    <article class="review-card">
+      <p class="review-rating" aria-label="5 out of 5 stars">★★★★★</p>
+      <blockquote class="review-quote">Every episode is a gem!</blockquote>
+      <p class="review-author">Jessica Knowl</p>
+    </article>
+    <article class="review-card">
+      <p class="review-rating" aria-label="5 out of 5 stars">★★★★★</p>
+      <blockquote class="review-quote">Whoa whoa, let me take some notes!</blockquote>
+      <p class="review-author">Scott Adams</p>
+    </article>
+    <article class="review-card">
+      <p class="review-rating" aria-label="5 out of 5 stars">★★★★★</p>
+      <blockquote class="review-quote">I’ve upped my game considerably since I started listening</blockquote>
+      <p class="review-author">Steven Blast</p>
+    </article>
+  </div>
+</section>
 
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Castaway</span>
+      <div class="footer-socials" aria-label="Social media">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="social-dot" cx="18" cy="6" r="1"></circle></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.9a8 8 0 0 1-2.4.7 4.2 4.2 0 0 0 1.8-2.3 8.4 8.4 0 0 1-2.7 1 4.2 4.2 0 0 0-7.2 3.8A12 12 0 0 1 2.8 4.8a4.2 4.2 0 0 0 1.3 5.6 4.1 4.1 0 0 1-1.9-.5v.1a4.2 4.2 0 0 0 3.4 4.1 4.3 4.3 0 0 1-1.9.1 4.2 4.2 0 0 0 3.9 2.9A8.5 8.5 0 0 1 1.4 19a12 12 0 0 0 18.5-10.1v-.6A8.5 8.5 0 0 0 22 5.9Z"></path></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-3H14V8c0-.9.3-1.5 1.6-1.5h2V3.8c-.4-.1-1.5-.2-2.8-.2-2.8 0-4.7 1.7-4.7 4.8v1.7H7v3h3.1v8H14Z"></path></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-navigation">
+      <span>Home</span>
+      <span>About</span>
+      <span>Episodes</span>
+      <span>Contact</span>
+    </div>
+    <div class="footer-navigation footer-navigation--info">
+      <span>Style Guide</span>
+      <span>Instructions</span>
+      <span>Changelog</span>
+      <span>Credit</span>
+      <span>Powered by Webflow</span>
+      <span>Licenses</span>
+    </div>
+    <div class="footer-platforms" aria-label="Listen on">
+      <img src="IMAGE%20(6).png" alt="Spotify">
+      <img src="IMAGE%20(7).png" alt="Apple Podcasts">
+      <img src="IMAGE%20(8).png" alt="SoundCloud">
+      <img src="IMAGE%20(9).png" alt="Podcast platform">
+      <img src="IMAGE%20(10).png" alt="Audio platform">
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

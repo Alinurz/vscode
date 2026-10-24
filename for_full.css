@@ -11,6 +11,10 @@ body {
   background-color: #191919;
 }
 
+body {
+  margin: 0;
+}
+
 /* =========================
    3. ТИПОГРАФИКА (заголовки, текст, ссылки)
    ========================= */
@@ -27,7 +31,7 @@ nav a {
     font-size: 1rem;
 }
 
-nav a:first-child {
+header nav a:first-child {
   color: #118da8;
 }
 
@@ -322,10 +326,10 @@ nav {
 
 .newsletter-decoration {
   position: absolute;
-  bottom: -14px;
-  left: -20px;
-  width: 300px;
-  height: auto;
+  bottom: 0;
+  left: 0;
+  width: 68px;
+  height: 74px;
   pointer-events: none;
 }
 
@@ -490,9 +494,183 @@ nav {
   border: 0;
 }
 
+.reviews-section {
+  padding: 42px 0 48px;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+}
+
+.reviews-grid {
+  display: grid;
+  width: min(1300px, calc(100vw - 70px));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 auto;
+}
+
+.review-card {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 160px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #000000;
+}
+
+.review-rating {
+  margin: 0 0 6px;
+  color: #fcff51;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
+.review-quote {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  overflow-wrap: anywhere;
+}
+
+.review-author {
+  margin: 0;
+  color: #b7b7b7;
+  font-size: 12px;
+  line-height: 18px;
+  overflow-wrap: anywhere;
+}
+
+.site-footer {
+  box-sizing: border-box;
+  padding: 48px 0 64px;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+}
+
+.footer-inner {
+  display: grid;
+  width: min(1300px, calc(100vw - 70px));
+  grid-template-columns: 2.35fr 1fr 1fr 2.35fr;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.footer-logo:hover {
+  color: #ffffff;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-socials a {
+  display: grid;
+  width: 14px;
+  height: 14px;
+  place-items: center;
+  color: #ffffff;
+}
+
+.footer-socials svg {
+  display: block;
+  width: 13px;
+  height: 13px;
+}
+
+.footer-socials a:first-child svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8px;
+}
+
+.footer-socials .social-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.footer-socials a:nth-child(2) svg,
+.footer-socials a:nth-child(3) svg {
+  fill: currentColor;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.footer-navigation span {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 15px;
+  overflow-wrap: anywhere;
+}
+
+.footer-socials a:hover {
+  color: #118da8;
+}
+
+.footer-platforms {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-platforms img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
 /* =========================
    6. ПРОЧИЕ / СПЕЦИФИЧНЫЕ СТИЛИ
    ========================= */
+
+@media (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .reviews-grid {
+    width: calc(100vw - 40px);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-inner {
+    width: calc(100vw - 40px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+}
 
 /* Адаптивность под мобильные экраны (меньше 768px) */
 @media (max-width: 768px) {
@@ -583,7 +761,8 @@ nav {
   }
 
   .newsletter-decoration {
-    left: -8px;
-    width: 150px;
+    left: 0;
+    width: 68px;
+    height: 74px;
   }
 }
