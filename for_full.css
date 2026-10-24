@@ -140,6 +140,25 @@ nav a:hover {
   margin: 0;
 }
 
+.newsletter-eyebrow {
+  margin: 0 0 2px;
+  color: #118da8;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.newsletter-title {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 79.2px;
+  letter-spacing: 2.88px;
+}
+
 /* =========================
    4. LAYOUT (шапка, футер, расположение блоков)
    ========================= */
@@ -222,6 +241,92 @@ nav {
   justify-self: end;
   width: 100%;
   max-width: 650px;
+}
+
+.newsletter-section {
+  position: relative;
+  left: 50%;
+  width: min(1300px, calc(100vw - 100px));
+  margin: 100px 0 80px;
+  transform: translateX(-50%);
+}
+
+.newsletter-card {
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 387px;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 60px;
+  border-radius: 32px;
+  background-color: #000000;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px;
+}
+
+.newsletter-copy,
+.newsletter-form {
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 58px;
+  padding: 10px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #191919;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 28.8px;
+}
+
+.newsletter-form input::placeholder {
+  color: #b7b7b7;
+  opacity: 1;
+}
+
+.newsletter-form input:focus-visible,
+.newsletter-submit:focus-visible {
+  outline: 2px solid #118da8;
+  outline-offset: 2px;
+}
+
+.newsletter-submit {
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #118DA8;
+  color: #ffffff;
+  font: inherit;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.newsletter-decoration {
+  position: absolute;
+  bottom: -14px;
+  left: -20px;
+  width: 300px;
+  height: auto;
+  pointer-events: none;
 }
 
 /* =========================
@@ -373,6 +478,18 @@ nav {
   height: 36px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* =========================
    6. ПРОЧИЕ / СПЕЦИФИЧНЫЕ СТИЛИ
    ========================= */
@@ -445,5 +562,28 @@ nav {
     font-size: 22px;
     line-height: 1.2;
     letter-spacing: 0.88px;
+  }
+
+  .newsletter-section {
+    width: calc(100vw - 40px);
+    margin: 0 0 60px;
+  }
+
+  .newsletter-card {
+    height: auto;
+    min-height: 387px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .newsletter-title {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  .newsletter-decoration {
+    left: -8px;
+    width: 150px;
   }
 }
